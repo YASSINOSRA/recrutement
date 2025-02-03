@@ -28,3 +28,4 @@ Follow the given rules while committing :
     - docs (use this when docs related changes are made)
     - chore (use this when composer/package or any other libraries are installed)
     
+# Rec
