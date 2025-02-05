@@ -70,11 +70,5 @@
     "GOOGLE_RECAPTCHA_SECRET": "your_recaptcha_secret",
     "DEBUGBAR_ENABLED": "false",
     "QUERY_DETECTOR_ENABLED": "false"
-  },
-  "build": {
-    "env": {
-      "LD_LIBRARY_PATH": "/usr/lib64:/usr/lib",
-      "PHP_INI_SCAN_DIR": "/etc/php/7.4/cli/conf.d"
-    }
   }
 }
