@@ -21,3 +21,7 @@ public/css/
 # Ignore documentation
 README.md
 
+# Ensure critical files are not ignored
+!composer.json
+!composer.lock
+!vendor/
