@@ -3,16 +3,24 @@
   "public": true,
   "outputDirectory": "public",
   "functions": {
-    "api/index.php": { "runtime": "vercel-php@0.6.0" }
+    "api/index.php": { 
+      "runtime": "vercel-php@0.6.0" 
+    }
   },
   "routes": [
-    { "src": "/(.*)", "dest": "/api/index.php" }
+    { 
+      "src": "/(.*)", 
+      "dest": "/api/index.php" 
+    }
   ],
   "build": {
     "env": {
       "LD_LIBRARY_PATH": "/usr/lib64:/usr/lib",
       "PHP_INI_SCAN_DIR": "/etc/php/7.4/cli/conf.d"
-    }
+    },
+    "commands": [
+      "composer install --no-dev --optimize-autoloader"
+    ]
   },
   "env": {
     "APP_NAME": "job",
