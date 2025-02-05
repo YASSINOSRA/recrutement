@@ -21,7 +21,3 @@ public/css/
 # Ignore documentation
 README.md
 
-# DO NOT ignore composer files and vendor folder
-!composer.json
-!composer.lock
-!vendor/
