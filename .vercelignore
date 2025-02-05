@@ -1,14 +1,27 @@
-vendor/
+# Ignore version control files
 .git/
-.vscode/
-*.log
-*.md
-*.txt
+
+# Ignore vendor and node modules
 node_modules/
-public/uploads/
-public/cache/
-tmp/
-*.tmp
+vendor/
+
+# Ignore tests
+tests/
+
+# Ignore environment files
 .env
-.env.local
-.env.production
+
+# Ignore unnecessary directories
+storage/
+
+# Ignore build files or temporary files
+dist/
+public/js/
+public/css/
+
+# Ignore composer-related files
+composer.json
+composer.lock
+
+# Ignore documentation
+README.md
