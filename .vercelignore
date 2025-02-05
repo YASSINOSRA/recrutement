@@ -5,15 +5,13 @@
 node_modules/
 
 # Ignore environment files
-.env
+
 
 # Ignore unnecessary directories
 storage/
 
 # Ignore build files or temporary files
-dist/
-public/js/
-public/css/
+
 
 # Ignore documentation
 README.md
