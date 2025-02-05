@@ -1,3 +1,27 @@
+# Ignore version control files
+.git/
 
-vendor/
+# Ignore node modules
+node_modules/
 
+# Ignore tests
+tests/
+
+# Ignore environment files
+.env
+
+# Ignore unnecessary directories
+storage/
+
+# Ignore build files or temporary files
+dist/
+public/js/
+public/css/
+
+# Ignore documentation
+README.md
+
+# DO NOT ignore composer files and vendor folder
+!composer.json
+!composer.lock
+!vendor/
