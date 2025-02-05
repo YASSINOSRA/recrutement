@@ -7,8 +7,6 @@ node_modules/
 # Ignore tests
 tests/
 
-# Ignore environment files
-.env
 
 # Ignore unnecessary directories
 storage/
