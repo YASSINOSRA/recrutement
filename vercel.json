@@ -1,20 +1,16 @@
 {
   "version": 2,
   "public": true,
-  "outputDirectory": "public",
   "builds": [
     {
-      "src": "composer.json",
-      "use": "@vercel/php",
-      "config": {
-        "composer": true
-      }
+      "src": "Dockerfile",
+      "use": "@vercel/docker"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/api/index.php"
+      "dest": "/public/index.php"
     }
   ],
   "env": {
