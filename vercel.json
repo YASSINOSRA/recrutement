@@ -38,8 +38,8 @@
     "MAIL_MAILER": "smtp",
     "MAIL_HOST": "smtp.gmail.com",
     "MAIL_PORT": "587",
-    "MAIL_USERNAME": "yassinerachid.sm.2018@gmail.com",  // Direct email username
-    "MAIL_PASSWORD": "eoigcwtxxpxemeyy",  // Direct email password
+    "MAIL_USERNAME": "yassinerachid.sm.2018@gmail.com",
+    "MAIL_PASSWORD": "eoigcwtxxpxemeyy",
     "MAIL_ENCRYPTION": "tls",
     "MAIL_FROM_ADDRESS": "yassinerachid.sm.2018@gmail.com",
     "MAIL_FROM_NAME": "job",
