@@ -1,27 +1,3 @@
-# Ignore version control files
-.git/
 
-# Ignore vendor and node modules
-node_modules/
 vendor/
 
-# Ignore tests
-tests/
-
-# Ignore environment files
-.env
-
-# Ignore unnecessary directories
-storage/
-
-# Ignore build files or temporary files
-dist/
-public/js/
-public/css/
-
-# Ignore composer-related files
-composer.json
-composer.lock
-
-# Ignore documentation
-README.md
