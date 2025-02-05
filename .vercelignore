@@ -1,17 +1,2 @@
-# Ignore version control files
-.git/
-
-# Ignore node modules
-
-
-# Ignore environment files
-
-
-# Ignore unnecessary directories
-storage/
-
-# Ignore build files or temporary files
-
-
-# Ignore documentation
-README.md
+/vendor
+/.idea
