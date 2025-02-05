@@ -2,17 +2,6 @@
   "version": 2,
   "public": true,
   "outputDirectory": "public",
-  "functions": {
-    "api/index.php": {
-      "runtime": "vercel-php@0.6.0"
-    }
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/api/index.php"
-    }
-  ],
   "builds": [
     {
       "src": "composer.json",
@@ -20,6 +9,12 @@
       "config": {
         "composer": true
       }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.php"
     }
   ],
   "env": {
