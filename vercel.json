@@ -1,6 +1,7 @@
 {
   "version": 2,
   "public": true,
+  "outputDirectory": "public",
   "functions": {
     "api/index.php": {
       "runtime": "vercel-php@0.6.0"
@@ -11,5 +12,70 @@
       "src": "/(.*)",
       "dest": "/api/index.php"
     }
-  ]
+  ],
+  "build": {
+    "env": {
+      "LD_LIBRARY_PATH": "/usr/lib64:/usr/lib",
+      "PHP_INI_SCAN_DIR": "/etc/php/7.4/cli/conf.d"
+    },
+    "commands": [
+      "apt-get update && apt-get install -y libssl-dev"
+    ]
+  },
+  "env": {
+    "APP_NAME": "job",
+    "APP_ENV": "production",
+    "APP_DEBUG": "false",
+    "APP_URL": "https://yourproductionurl.com",
+    "LOG_CHANNEL": "stack",
+    "LOG_LEVEL": "debug",
+    "DB_CONNECTION": "mysql",
+    "DB_HOST": "@db_host",
+    "DB_PORT": "3306",
+    "DB_DATABASE": "@db_name",
+    "DB_USERNAME": "@db_user",
+    "DB_PASSWORD": "@db_password",
+    "CACHE_DRIVER": "file",
+    "FILESYSTEM_DISK": "local",
+    "QUEUE_CONNECTION": "sync",
+    "SESSION_DRIVER": "cookie",
+    "SESSION_LIFETIME": "120",
+    "REDIS_HOST": "127.0.0.1",
+    "REDIS_PASSWORD": "",
+    "REDIS_PORT": "6379",
+    "MAIL_MAILER": "smtp",
+    "MAIL_HOST": "smtp.gmail.com",
+    "MAIL_PORT": "587",
+    "MAIL_USERNAME": "@mail_user",
+    "MAIL_PASSWORD": "@mail_password",
+    "MAIL_ENCRYPTION": "tls",
+    "MAIL_FROM_ADDRESS": "@mail_user",
+    "MAIL_FROM_NAME": "job",
+    "PUSHER_APP_ID": "@pusher_id",
+    "PUSHER_APP_KEY": "@pusher_key",
+    "PUSHER_APP_SECRET": "@pusher_secret",
+    "PUSHER_APP_CLUSTER": "mt1",
+    "GOOGLE_CLIENT_ID": "@google_id",
+    "GOOGLE_CLIENT_SECRET": "@google_secret",
+    "GOOGLE_REDIRECT": "${APP_URL}/login/google/callback",
+    "FACEBOOK_APP_ID": "@facebook_id",
+    "FACEBOOK_APP_SECRET": "@facebook_secret",
+    "FACEBOOK_REDIRECT": "${APP_URL}/login/facebook/callback",
+    "MIX_PUSHER_APP_KEY": "${PUSHER_APP_KEY}",
+    "MIX_PUSHER_APP_CLUSTER": "${PUSHER_APP_CLUSTER}",
+    "MEDIA_DISK": "public",
+    "STRIPE_KEY": "@stripe_key",
+    "STRIPE_SECRET": "@stripe_secret",
+    "STRIPE_WEBHOOK_SECRET_KEY": "@stripe_webhook",
+    "LINKEDIN_CLIENT_ID": "@linkedin_id",
+    "LINKEDIN_CLIENT_SECRET": "@linkedin_secret",
+    "LINKEDIN_REDIRECT": "${APP_URL}/login/linkedin/callback",
+    "PAYPAL_CLIENT_ID": "@paypal_id",
+    "PAYPAL_SECRET": "@paypal_secret",
+    "COOKIE_CONSENT_ENABLED": "true",
+    "GOOGLE_RECAPTCHA_SITE_KEY": "@recaptcha_site_key",
+    "GOOGLE_RECAPTCHA_SECRET": "@recaptcha_secret",
+    "DEBUGBAR_ENABLED": "false",
+    "QUERY_DETECTOR_ENABLED": "false"
+  }
 }
