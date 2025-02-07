@@ -1,1 +1,2 @@
-web: php artisan serve --host=https://recrutement-production.up.railway.app --port=9000
+release: php artisan cache:clear && php artisan migrate --force && php artisan route:clear
+web: php artisan serve --host=0.0.0.0 --port=8080
