@@ -1,10 +1,10 @@
-# Use PHP 8.2 FPM
+# Use PHP 8.2 FPM as base image
 FROM php:8.2-fpm
 
 # Set working directory
 WORKDIR /var/www/html
 
-# Install dependencies
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     git \
     unzip \
@@ -14,8 +14,11 @@ RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     libonig-dev \
     zip \
+    libzip-dev \
+    libexif-dev \
+    libbcmath-dev \
     && docker-php-ext-configure gd \
-    && docker-php-ext-install gd mbstring pdo pdo_mysql
+    && docker-php-ext-install gd mbstring pdo pdo_mysql exif bcmath zip
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
@@ -23,7 +26,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Copy Laravel app files (except vendor)
 COPY . .
 
-# Set permissions
+# Set permissions for Laravel's storage and cache directories
 RUN chown -R www-data:www-data /var/www/html
 RUN chmod -R 777 storage bootstrap/cache
 
