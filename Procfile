@@ -1,2 +1,2 @@
-release: php artisan cache:clear && php artisan migrate --force && php artisan route:clear
+release: php artisan cache:clear  && php artisan route:clear
 web: php artisan serve --host=0.0.0.0 --port=8080
