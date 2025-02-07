@@ -13,7 +13,6 @@ RUN apt-get update && apt-get install -y \
     zip \
     libzip-dev \
     libexif-dev \
-    libbcmath-dev \
     && docker-php-ext-configure gd \
     && docker-php-ext-install gd mbstring pdo pdo_mysql exif bcmath zip
 
